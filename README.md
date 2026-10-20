@@ -163,7 +163,7 @@ La lista de fotos es un **signal** de Angular (`signal<UserPhoto[]>`). Cada vez 
 
 ---
 
-## Autora: Amy Díaz
+## Autora
 
 **Amy Mishell**
 GitHub: [@Amy-Mishell06](https://github.com/Amy-Mishell06)
