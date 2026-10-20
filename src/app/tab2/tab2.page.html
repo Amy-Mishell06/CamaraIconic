@@ -5,6 +5,24 @@
 </ion-header>
 
 <ion-content>
+  @if (photoService.photos().length === 0) {
+    <div class="empty">
+      <ion-text color="medium">
+        <p>Aún no hay fotos. Toca el botón de la cámara para tomar una.</p>
+      </ion-text>
+    </div>
+  }
+
+  <ion-grid>
+    <ion-row>
+      @for (photo of photoService.photos(); track photo.filepath; let i = $index) {
+        <ion-col size="6" size-md="4" size-lg="3">
+          <img [src]="photo.webviewPath" (click)="showActionSheet(photo, i)" alt="Foto" />
+        </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
+
   <ion-fab
     vertical="bottom"
     horizontal="center"
